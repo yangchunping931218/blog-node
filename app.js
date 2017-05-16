@@ -1,7 +1,7 @@
 /*!
  * nodeclub - app.js
  */
-
+var node = 'js';
 /**
  * Module dependencies.
  */
