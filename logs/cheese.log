@@ -1,108 +1,1257 @@
-[2017-05-16 10:55:57.841] [INFO] cheese - NodeClub listening on port 3000
-[2017-05-16 10:55:57.844] [INFO] cheese - God bless love....
-[2017-05-16 10:55:57.845] [INFO] cheese - You can debug your app with http://localhost:3000
-[2017-05-16 10:55:57.847] [INFO] cheese - 
-[2017-05-16 10:56:11.361] [INFO] cheese - 
+[2017-05-15 18:45:43.048] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" } }, sort: { top: -1, last_reply_at: -1 }, projection: {}, limit: 20 }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
 
-Started 2017-05-16T02:56:11.360Z GET / ::ffff:192.168.6.99
-[2017-05-16 10:56:11.381] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m4ms[39m
-[2017-05-16 10:56:11.402] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m2ms[39m
-[2017-05-16 10:56:11.403] [DEBUG] cheese - Cache get tops [32m6ms[39m
-[2017-05-16 10:56:11.403] [DEBUG] cheese - Cache get no_reply_topics [32m5ms[39m
-[2017-05-16 10:56:11.404] [DEBUG] cheese - Cache get {"tab":{"$ne":"job"},"deleted":false}pages [32m6ms[39m
-[2017-05-16 10:56:11.437] [INFO] cheese - Render view index [32m(32ms)[39m
-[2017-05-16 10:56:11.441] [INFO] cheese - Completed 200 [32m(81ms)[39m
-[2017-05-16 10:56:17.191] [INFO] cheese - 
+  name: 'MongoError',
+  message: 'not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" } }, sort: { top: -1, last_reply_at: -1 }, projection: {}, limit: 20 }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" } }, sort: { top: -1, last_reply_at: -1 }, projection: {}, limit: 20 }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:45:43.058] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_test to execute command { find: "users", filter: { is_block: false }, sort: { score: -1 }, limit: 10 }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
 
-Started 2017-05-16T02:56:17.190Z GET /about ::ffff:192.168.6.99
-[2017-05-16 10:56:17.259] [INFO] cheese - Render view static/about [32m(52ms)[39m
-[2017-05-16 10:56:17.260] [INFO] cheese - Completed 200 [32m(70ms)[39m
-[2017-05-16 10:56:26.893] [INFO] cheese - 
+  name: 'MongoError',
+  message: 'not authorized on node_club_test to execute command { find: "users", filter: { is_block: false }, sort: { score: -1 }, limit: 10 }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_test to execute command { find: "users", filter: { is_block: false }, sort: { score: -1 }, limit: 10 }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:45:43.059] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" }, reply_count: 0 }, sort: { create_at: -1 }, projection: {}, limit: 5 }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
 
-Started 2017-05-16T02:56:26.893Z GET / ::ffff:192.168.6.99
-[2017-05-16 10:56:26.903] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m1ms[39m
-[2017-05-16 10:56:26.904] [DEBUG] cheese - Cache get tops [32m3ms[39m
-[2017-05-16 10:56:26.904] [DEBUG] cheese - Cache get no_reply_topics [32m2ms[39m
-[2017-05-16 10:56:26.904] [DEBUG] cheese - Cache get {"tab":{"$ne":"job"},"deleted":false}pages [32m2ms[39m
-[2017-05-16 10:56:26.914] [INFO] cheese - Render view index [32m(10ms)[39m
-[2017-05-16 10:56:26.915] [INFO] cheese - Completed 304 [32m(22ms)[39m
-[2017-05-16 10:59:45.100] [INFO] cheese - 
+  name: 'MongoError',
+  message: 'not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" }, reply_count: 0 }, sort: { create_at: -1 }, projection: {}, limit: 5 }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" }, reply_count: 0 }, sort: { create_at: -1 }, projection: {}, limit: 5 }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:45:43.083] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" } }, sort: { top: -1, last_reply_at: -1 }, projection: {}, limit: 20 }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
 
-Started 2017-05-16T02:59:45.100Z GET / ::ffff:192.168.6.99
-[2017-05-16 10:59:45.113] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m2ms[39m
-[2017-05-16 10:59:45.120] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m0ms[39m
-[2017-05-16 10:59:45.120] [DEBUG] cheese - [35mMONGO[39m users.[34mfind[39m {"conditions":{"is_block":false},"options":{"limit":10,"sort":{"score":-1}},"collectionName":"users"} [32m4ms[39m
-[2017-05-16 10:59:45.121] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"},"reply_count":0},"options":{"limit":5,"sort":{"create_at":-1},"fields":{}},"collectionName":"topics"} [32m4ms[39m
-[2017-05-16 10:59:45.122] [DEBUG] cheese - Cache set tops [32m0ms[39m
-[2017-05-16 10:59:45.123] [DEBUG] cheese - Cache set no_reply_topics [32m0ms[39m
-[2017-05-16 10:59:45.132] [INFO] cheese - Render view index [32m(9ms)[39m
-[2017-05-16 10:59:45.136] [INFO] cheese - Completed 200 [32m(36ms)[39m
-[2017-05-16 10:59:45.930] [INFO] cheese - 
+  name: 'MongoError',
+  message: 'not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" } }, sort: { top: -1, last_reply_at: -1 }, projection: {}, limit: 20 }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" } }, sort: { top: -1, last_reply_at: -1 }, projection: {}, limit: 20 }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:45:43.088] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_test to execute command { find: "users", filter: { is_block: false }, sort: { score: -1 }, limit: 10 }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
 
-Started 2017-05-16T02:59:45.930Z GET / ::ffff:192.168.6.99
-[2017-05-16 10:59:45.942] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m1ms[39m
-[2017-05-16 10:59:45.943] [DEBUG] cheese - Cache get tops [32m2ms[39m
-[2017-05-16 10:59:45.943] [DEBUG] cheese - Cache get no_reply_topics [32m2ms[39m
-[2017-05-16 10:59:45.943] [DEBUG] cheese - Cache get {"tab":{"$ne":"job"},"deleted":false}pages [32m2ms[39m
-[2017-05-16 10:59:45.945] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m1ms[39m
-[2017-05-16 10:59:45.952] [INFO] cheese - Render view index [32m(7ms)[39m
-[2017-05-16 10:59:45.953] [INFO] cheese - Completed 304 [32m(23ms)[39m
-[2017-05-16 10:59:49.508] [INFO] cheese - 
+  name: 'MongoError',
+  message: 'not authorized on node_club_test to execute command { find: "users", filter: { is_block: false }, sort: { score: -1 }, limit: 10 }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_test to execute command { find: "users", filter: { is_block: false }, sort: { score: -1 }, limit: 10 }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:45:43.090] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" }, reply_count: 0 }, sort: { create_at: -1 }, projection: {}, limit: 5 }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
 
-Started 2017-05-16T02:59:49.508Z GET /my/messages ::ffff:192.168.6.99
-[2017-05-16 10:59:49.520] [DEBUG] cheese - [35mMONGO[39m messages.[34mfind[39m {"conditions":{"has_read":true,"master_id":"59198c44bde8a69618cb7a39"},"options":{"sort":{"create_at":-1},"limit":20},"collectionName":"messages"} [32m2ms[39m
-[2017-05-16 10:59:49.521] [DEBUG] cheese - [35mMONGO[39m messages.[34mfind[39m {"conditions":{"has_read":false,"master_id":"59198c44bde8a69618cb7a39"},"options":{"sort":{"create_at":-1}},"collectionName":"messages"} [32m2ms[39m
-[2017-05-16 10:59:49.531] [INFO] cheese - Render view message/index [32m(9ms)[39m
-[2017-05-16 10:59:49.534] [INFO] cheese - Completed 200 [32m(26ms)[39m
-[2017-05-16 10:59:50.980] [INFO] cheese - 
+  name: 'MongoError',
+  message: 'not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" }, reply_count: 0 }, sort: { create_at: -1 }, projection: {}, limit: 5 }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" }, reply_count: 0 }, sort: { create_at: -1 }, projection: {}, limit: 5 }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:45:43.116] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false }, sort: { create_at: -1 }, projection: { _id: 1 }, limit: 50000 }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
 
-Started 2017-05-16T02:59:50.980Z GET / ::ffff:192.168.6.99
-[2017-05-16 10:59:50.990] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m1ms[39m
-[2017-05-16 10:59:50.991] [DEBUG] cheese - Cache get tops [32m2ms[39m
-[2017-05-16 10:59:50.991] [DEBUG] cheese - Cache get no_reply_topics [32m2ms[39m
-[2017-05-16 10:59:50.991] [DEBUG] cheese - Cache get {"tab":{"$ne":"job"},"deleted":false}pages [32m2ms[39m
-[2017-05-16 10:59:50.994] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m0ms[39m
-[2017-05-16 10:59:51.012] [INFO] cheese - Render view index [32m(18ms)[39m
-[2017-05-16 10:59:51.013] [INFO] cheese - Completed 304 [32m(33ms)[39m
-[2017-05-16 10:59:53.092] [INFO] cheese - 
+  name: 'MongoError',
+  message: 'not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false }, sort: { create_at: -1 }, projection: { _id: 1 }, limit: 50000 }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false }, sort: { create_at: -1 }, projection: { _id: 1 }, limit: 50000 }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:45:53.247] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_test to execute command { find: "users", filter: { $or: [ { loginname: "testuser1494845112069" }, { email: "testuser1494845112069@gmail.com" } ] } }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
 
-Started 2017-05-16T02:59:53.092Z GET /user/yangchunping ::ffff:192.168.6.99
-[2017-05-16 10:59:53.102] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"loginname":{}},"options":{},"collectionName":"users"} [32m2ms[39m
-[2017-05-16 10:59:53.106] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"author_id":"59198c44bde8a69618cb7a39"},"options":{"limit":5,"sort":{"create_at":-1},"fields":{}},"collectionName":"topics"} [32m2ms[39m
-[2017-05-16 10:59:53.108] [DEBUG] cheese - [35mMONGO[39m replies.[34mfind[39m {"conditions":{"author_id":"59198c44bde8a69618cb7a39"},"options":{"limit":20,"sort":{"create_at":-1},"fields":{}},"collectionName":"replies"} [32m3ms[39m
-[2017-05-16 10:59:53.118] [DEBUG] cheese - [35mMONGO[39m replies.[34mfindOne[39m {"conditions":{"_id":"591990592fb543171b5233cf"},"options":{},"collectionName":"replies"} [32m3ms[39m
-[2017-05-16 10:59:53.119] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m7ms[39m
-[2017-05-16 10:59:53.120] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"_id":{"$in":["591990002fb543171b5233ce"]}},"options":{"fields":{}},"collectionName":"topics"} [32m4ms[39m
-[2017-05-16 10:59:53.125] [DEBUG] cheese - [35mMONGO[39m replies.[34mfindOne[39m {"conditions":{"_id":"591990592fb543171b5233cf"},"options":{},"collectionName":"replies"} [32m2ms[39m
-[2017-05-16 10:59:53.126] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m3ms[39m
-[2017-05-16 10:59:53.127] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m5ms[39m
-[2017-05-16 10:59:53.131] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m1ms[39m
-[2017-05-16 10:59:53.159] [INFO] cheese - Render view user/index [32m(24ms)[39m
-[2017-05-16 10:59:53.160] [INFO] cheese - Completed 200 [32m(68ms)[39m
-[2017-05-16 10:59:56.612] [INFO] cheese - 
+  name: 'MongoError',
+  message: 'not authorized on node_club_test to execute command { find: "users", filter: { $or: [ { loginname: "testuser1494845112069" }, { email: "testuser1494845112069@gmail.com" } ] } }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_test to execute command { find: "users", filter: { $or: [ { loginname: "testuser1494845112069" }, { email: "testuser1494845112069@gmail.com" } ] } }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:45:53.276] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_test to execute command { find: "users", filter: { $or: [ { loginname: "testuser14948451120691" }, { email: "testuser1494845112069@gmail.com" } ] } }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
 
-Started 2017-05-16T02:59:56.612Z GET /topic/591990002fb543171b5233ce ::ffff:192.168.6.99
-[2017-05-16 10:59:56.667] [DEBUG] cheese - [35mMONGO[39m topics.[34mfindOne[39m {"conditions":{"deleted":false,"_id":"591990002fb543171b5233ce"},"options":{},"collectionName":"topics"} [32m3ms[39m
-[2017-05-16 10:59:56.668] [DEBUG] cheese - [35mMONGO[39m topiccollects.[34mfindOne[39m {"conditions":{"topic_id":"591990002fb543171b5233ce","user_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"topiccollects"} [32m2ms[39m
-[2017-05-16 10:59:56.672] [DEBUG] cheese - [35mMONGO[39m replies.[34mfind[39m {"conditions":{"deleted":false,"topic_id":"591990002fb543171b5233ce"},"options":{"sort":{"create_at":1}},"collectionName":"replies"} [32m1ms[39m
-[2017-05-16 10:59:56.673] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m2ms[39m
-[2017-05-16 10:59:56.676] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m1ms[39m
-[2017-05-16 10:59:56.691] [DEBUG] cheese - Cache get no_reply_topics [32m10ms[39m
-[2017-05-16 10:59:56.693] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"_id":{"$nin":["591990002fb543171b5233ce"]},"author_id":"59198c44bde8a69618cb7a39"},"options":{"limit":5,"sort":{"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m5ms[39m
-[2017-05-16 10:59:56.785] [INFO] cheese - Render view topic/index [32m(92ms)[39m
-[2017-05-16 10:59:56.787] [INFO] cheese - Completed 200 [32m(175ms)[39m
-[2017-05-16 11:00:06.061] [INFO] cheese - 
+  name: 'MongoError',
+  message: 'not authorized on node_club_test to execute command { find: "users", filter: { $or: [ { loginname: "testuser14948451120691" }, { email: "testuser1494845112069@gmail.com" } ] } }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_test to execute command { find: "users", filter: { $or: [ { loginname: "testuser14948451120691" }, { email: "testuser1494845112069@gmail.com" } ] } }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:45:53.314] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_test to execute command { find: "users", filter: { loginname: /^testuser1494845112069$/i }, limit: 1, batchSize: 1, singleBatch: true }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
 
-Started 2017-05-16T03:00:06.061Z GET /topic/create ::ffff:192.168.6.99
-[2017-05-16 11:00:06.078] [INFO] cheese - Render view topic/edit [32m(9ms)[39m
-[2017-05-16 11:00:06.079] [INFO] cheese - Completed 200 [32m(18ms)[39m
-[2017-05-16 11:00:08.563] [INFO] cheese - 
+  name: 'MongoError',
+  message: 'not authorized on node_club_test to execute command { find: "users", filter: { loginname: /^testuser1494845112069$/i }, limit: 1, batchSize: 1, singleBatch: true }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_test to execute command { find: "users", filter: { loginname: /^testuser1494845112069$/i }, limit: 1, batchSize: 1, singleBatch: true }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:45:53.332] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_test to execute command { find: "users", filter: { loginname: /^testuser1494845112069$/i }, limit: 1, batchSize: 1, singleBatch: true }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
 
-Started 2017-05-16T03:00:08.563Z GET / ::ffff:192.168.6.99
-[2017-05-16 11:00:08.572] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m1ms[39m
-[2017-05-16 11:00:08.572] [DEBUG] cheese - Cache get tops [32m2ms[39m
-[2017-05-16 11:00:08.573] [DEBUG] cheese - Cache get no_reply_topics [32m3ms[39m
-[2017-05-16 11:00:08.573] [DEBUG] cheese - Cache get {"tab":{"$ne":"job"},"deleted":false}pages [32m3ms[39m
-[2017-05-16 11:00:08.575] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m0ms[39m
-[2017-05-16 11:00:08.585] [INFO] cheese - Render view index [32m(10ms)[39m
-[2017-05-16 11:00:08.586] [INFO] cheese - Completed 304 [32m(23ms)[39m
+  name: 'MongoError',
+  message: 'not authorized on node_club_test to execute command { find: "users", filter: { loginname: /^testuser1494845112069$/i }, limit: 1, batchSize: 1, singleBatch: true }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_test to execute command { find: "users", filter: { loginname: /^testuser1494845112069$/i }, limit: 1, batchSize: 1, singleBatch: true }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:45:53.346] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_test to execute command { find: "users", filter: { loginname: /^testuser1494845112069$/i }, limit: 1, batchSize: 1, singleBatch: true }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
+
+  name: 'MongoError',
+  message: 'not authorized on node_club_test to execute command { find: "users", filter: { loginname: /^testuser1494845112069$/i }, limit: 1, batchSize: 1, singleBatch: true }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_test to execute command { find: "users", filter: { loginname: /^testuser1494845112069$/i }, limit: 1, batchSize: 1, singleBatch: true }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:45:53.373] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_test to execute command { find: "users", filter: { email: "testuser1494845112069@gmail.com" }, limit: 1, batchSize: 1, singleBatch: true }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
+
+  name: 'MongoError',
+  message: 'not authorized on node_club_test to execute command { find: "users", filter: { email: "testuser1494845112069@gmail.com" }, limit: 1, batchSize: 1, singleBatch: true }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_test to execute command { find: "users", filter: { email: "testuser1494845112069@gmail.com" }, limit: 1, batchSize: 1, singleBatch: true }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:45:53.394] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_test to execute command { find: "users", filter: { retrieve_key: "", loginname: "testuser1494845112069" }, limit: 1, batchSize: 1, singleBatch: true }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
+
+  name: 'MongoError',
+  message: 'not authorized on node_club_test to execute command { find: "users", filter: { retrieve_key: "", loginname: "testuser1494845112069" }, limit: 1, batchSize: 1, singleBatch: true }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_test to execute command { find: "users", filter: { retrieve_key: "", loginname: "testuser1494845112069" }, limit: 1, batchSize: 1, singleBatch: true }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:45:53.406] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_test to execute command { find: "users", filter: { retrieve_key: "wrong key", loginname: "testuser1494845112069" }, limit: 1, batchSize: 1, singleBatch: true }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
+
+  name: 'MongoError',
+  message: 'not authorized on node_club_test to execute command { find: "users", filter: { retrieve_key: "wrong key", loginname: "testuser1494845112069" }, limit: 1, batchSize: 1, singleBatch: true }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_test to execute command { find: "users", filter: { retrieve_key: "wrong key", loginname: "testuser1494845112069" }, limit: 1, batchSize: 1, singleBatch: true }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:45:53.439] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false }, sort: { create_at: -1 }, projection: {}, limit: 50 }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
+
+  name: 'MongoError',
+  message: 'not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false }, sort: { create_at: -1 }, projection: {}, limit: 50 }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false }, sort: { create_at: -1 }, projection: {}, limit: 50 }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:46:34.516] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_test to execute command { find: "users", filter: { accessToken: "not_exists" }, limit: 1, batchSize: 1, singleBatch: true }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
+
+  name: 'MongoError',
+  message: 'not authorized on node_club_test to execute command { find: "users", filter: { accessToken: "not_exists" }, limit: 1, batchSize: 1, singleBatch: true }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_test to execute command { find: "users", filter: { accessToken: "not_exists" }, limit: 1, batchSize: 1, singleBatch: true }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:46:57.725] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" } }, sort: { top: -1, last_reply_at: -1 }, projection: {}, limit: 20 }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
+
+  name: 'MongoError',
+  message: 'not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" } }, sort: { top: -1, last_reply_at: -1 }, projection: {}, limit: 20 }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" } }, sort: { top: -1, last_reply_at: -1 }, projection: {}, limit: 20 }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:46:57.730] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_test to execute command { find: "users", filter: { is_block: false }, sort: { score: -1 }, limit: 10 }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
+
+  name: 'MongoError',
+  message: 'not authorized on node_club_test to execute command { find: "users", filter: { is_block: false }, sort: { score: -1 }, limit: 10 }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_test to execute command { find: "users", filter: { is_block: false }, sort: { score: -1 }, limit: 10 }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:46:57.731] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" }, reply_count: 0 }, sort: { create_at: -1 }, projection: {}, limit: 5 }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
+
+  name: 'MongoError',
+  message: 'not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" }, reply_count: 0 }, sort: { create_at: -1 }, projection: {}, limit: 5 }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_test to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" }, reply_count: 0 }, sort: { create_at: -1 }, projection: {}, limit: 5 }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:47:14.290] [INFO] cheese - NodeClub listening on port 3000
+[2017-05-15 18:47:14.293] [INFO] cheese - God bless love....
+[2017-05-15 18:47:14.294] [INFO] cheese - You can debug your app with http://localhost:3000
+[2017-05-15 18:47:14.296] [INFO] cheese - 
+[2017-05-15 18:47:42.531] [INFO] cheese - NodeClub listening on port 3000
+[2017-05-15 18:47:42.534] [INFO] cheese - God bless love....
+[2017-05-15 18:47:42.534] [INFO] cheese - You can debug your app with http://localhost:3000
+[2017-05-15 18:47:42.537] [INFO] cheese - 
+[2017-05-15 18:49:34.245] [INFO] cheese - 
+
+Started 2017-05-15T10:49:34.244Z GET / ::ffff:192.168.6.99
+[2017-05-15 18:49:34.270] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_dev to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" } }, sort: { top: -1, last_reply_at: -1 }, projection: {}, limit: 20 }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
+
+  name: 'MongoError',
+  message: 'not authorized on node_club_dev to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" } }, sort: { top: -1, last_reply_at: -1 }, projection: {}, limit: 20 }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_dev to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" } }, sort: { top: -1, last_reply_at: -1 }, projection: {}, limit: 20 }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:49:34.277] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m7ms[39m
+[2017-05-15 18:49:34.288] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_dev to execute command { find: "users", filter: { is_block: false }, sort: { score: -1 }, limit: 10 }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
+
+  name: 'MongoError',
+  message: 'not authorized on node_club_dev to execute command { find: "users", filter: { is_block: false }, sort: { score: -1 }, limit: 10 }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_dev to execute command { find: "users", filter: { is_block: false }, sort: { score: -1 }, limit: 10 }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:49:34.290] [DEBUG] cheese - [35mMONGO[39m users.[34mfind[39m {"conditions":{"is_block":false},"options":{"limit":10,"sort":{"score":-1}},"collectionName":"users"} [32m4ms[39m
+[2017-05-15 18:49:34.291] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_dev to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" }, reply_count: 0 }, sort: { create_at: -1 }, projection: {}, limit: 5 }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
+
+  name: 'MongoError',
+  message: 'not authorized on node_club_dev to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" }, reply_count: 0 }, sort: { create_at: -1 }, projection: {}, limit: 5 }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_dev to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" }, reply_count: 0 }, sort: { create_at: -1 }, projection: {}, limit: 5 }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:49:34.292] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"},"reply_count":0},"options":{"limit":5,"sort":{"create_at":-1},"fields":{}},"collectionName":"topics"} [32m6ms[39m
+[2017-05-15 18:49:34.307] [INFO] cheese - Completed 500 [32m(63ms)[39m
+[2017-05-15 18:49:34.412] [INFO] cheese - 
+
+Started 2017-05-15T10:49:34.412Z GET /favicon.ico ::ffff:192.168.6.99
+[2017-05-15 18:49:34.422] [INFO] cheese - Completed 404 [32m(10ms)[39m
+[2017-05-15 18:50:12.010] [INFO] cheese - 
+
+Started 2017-05-15T10:50:12.010Z GET / ::ffff:192.168.6.99
+[2017-05-15 18:50:12.015] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_dev to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" } }, sort: { top: -1, last_reply_at: -1 }, projection: {}, limit: 20 }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
+
+  name: 'MongoError',
+  message: 'not authorized on node_club_dev to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" } }, sort: { top: -1, last_reply_at: -1 }, projection: {}, limit: 20 }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_dev to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" } }, sort: { top: -1, last_reply_at: -1 }, projection: {}, limit: 20 }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:50:12.016] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m3ms[39m
+[2017-05-15 18:50:12.021] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_dev to execute command { find: "users", filter: { is_block: false }, sort: { score: -1 }, limit: 10 }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
+
+  name: 'MongoError',
+  message: 'not authorized on node_club_dev to execute command { find: "users", filter: { is_block: false }, sort: { score: -1 }, limit: 10 }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_dev to execute command { find: "users", filter: { is_block: false }, sort: { score: -1 }, limit: 10 }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:50:12.022] [DEBUG] cheese - [35mMONGO[39m users.[34mfind[39m {"conditions":{"is_block":false},"options":{"limit":10,"sort":{"score":-1}},"collectionName":"users"} [32m3ms[39m
+[2017-05-15 18:50:12.023] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_dev to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" }, reply_count: 0 }, sort: { create_at: -1 }, projection: {}, limit: 5 }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
+
+  name: 'MongoError',
+  message: 'not authorized on node_club_dev to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" }, reply_count: 0 }, sort: { create_at: -1 }, projection: {}, limit: 5 }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_dev to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" }, reply_count: 0 }, sort: { create_at: -1 }, projection: {}, limit: 5 }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:50:12.024] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"},"reply_count":0},"options":{"limit":5,"sort":{"create_at":-1},"fields":{}},"collectionName":"topics"} [32m4ms[39m
+[2017-05-15 18:50:12.032] [INFO] cheese - Completed 500 [32m(22ms)[39m
+[2017-05-15 18:50:56.911] [INFO] cheese - 
+
+Started 2017-05-15T10:50:56.911Z GET / ::ffff:192.168.6.99
+[2017-05-15 18:50:56.948] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_dev to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" } }, sort: { top: -1, last_reply_at: -1 }, projection: {}, limit: 20 }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
+
+  name: 'MongoError',
+  message: 'not authorized on node_club_dev to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" } }, sort: { top: -1, last_reply_at: -1 }, projection: {}, limit: 20 }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_dev to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" } }, sort: { top: -1, last_reply_at: -1 }, projection: {}, limit: 20 }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:50:56.949] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m4ms[39m
+[2017-05-15 18:50:56.955] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_dev to execute command { find: "users", filter: { is_block: false }, sort: { score: -1 }, limit: 10 }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
+
+  name: 'MongoError',
+  message: 'not authorized on node_club_dev to execute command { find: "users", filter: { is_block: false }, sort: { score: -1 }, limit: 10 }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_dev to execute command { find: "users", filter: { is_block: false }, sort: { score: -1 }, limit: 10 }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:50:56.957] [DEBUG] cheese - [35mMONGO[39m users.[34mfind[39m {"conditions":{"is_block":false},"options":{"limit":10,"sort":{"score":-1}},"collectionName":"users"} [32m4ms[39m
+[2017-05-15 18:50:56.958] [ERROR] cheese - traceMQuery error: { MongoError: not authorized on node_club_dev to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" }, reply_count: 0 }, sort: { create_at: -1 }, projection: {}, limit: 5 }
+  at Function.MongoError.create (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/error.js:31:11)
+  at queryCallback (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/cursor.js:196:36)
+  at Callbacks.emit (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:116:3)
+  at Connection.messageHandler (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/topologies/server.js:291:23)
+  at Socket.<anonymous> (/data0/web_root/nodeclub-master/node_modules/mongodb-core/lib/connection/connection.js:285:22)
+  at emitOne (events.js:96:13)
+  at Socket.emit (events.js:188:7)
+  at readableAddChunk (_stream_readable.js:176:18)
+  at Socket.Readable.push (_stream_readable.js:134:10)
+  at TCP.onread (net.js:551:20)
+
+  name: 'MongoError',
+  message: 'not authorized on node_club_dev to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" }, reply_count: 0 }, sort: { create_at: -1 }, projection: {}, limit: 5 }',
+  ok: 0,
+  errmsg: 'not authorized on node_club_dev to execute command { find: "topics", filter: { deleted: false, tab: { $ne: "job" }, reply_count: 0 }, sort: { create_at: -1 }, projection: {}, limit: 5 }',
+  code: 13,
+  codeName: 'Unauthorized' }
+[2017-05-15 18:50:56.959] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"},"reply_count":0},"options":{"limit":5,"sort":{"create_at":-1},"fields":{}},"collectionName":"topics"} [32m4ms[39m
+[2017-05-15 18:50:56.963] [INFO] cheese - Completed 500 [32m(52ms)[39m
+[2017-05-15 18:53:33.661] [INFO] cheese - 
+
+Started 2017-05-15T10:53:33.661Z GET / ::ffff:192.168.6.99
+[2017-05-15 18:53:33.671] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m5ms[39m
+[2017-05-15 18:53:33.676] [DEBUG] cheese - [35mMONGO[39m users.[34mfind[39m {"conditions":{"is_block":false},"options":{"limit":10,"sort":{"score":-1}},"collectionName":"users"} [32m4ms[39m
+[2017-05-15 18:53:33.677] [DEBUG] cheese - Cache set tops [32m0ms[39m
+[2017-05-15 18:53:33.681] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"},"reply_count":0},"options":{"limit":5,"sort":{"create_at":-1},"fields":{}},"collectionName":"topics"} [32m8ms[39m
+[2017-05-15 18:53:33.682] [DEBUG] cheese - Cache set no_reply_topics [32m0ms[39m
+[2017-05-15 18:53:33.683] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m0ms[39m
+[2017-05-15 18:53:33.706] [INFO] cheese - Render view index [32m(22ms)[39m
+[2017-05-15 18:53:33.707] [INFO] cheese - Completed 200 [32m(46ms)[39m
+[2017-05-15 18:53:37.891] [INFO] cheese - 
+
+Started 2017-05-15T10:53:37.891Z GET /getstart ::ffff:192.168.6.99
+[2017-05-15 18:53:37.950] [INFO] cheese - Render view static/getstart [32m(56ms)[39m
+[2017-05-15 18:53:37.951] [INFO] cheese - Completed 200 [32m(60ms)[39m
+[2017-05-15 18:53:41.180] [INFO] cheese - 
+
+Started 2017-05-15T10:53:41.179Z GET / ::ffff:192.168.6.99
+[2017-05-15 18:53:41.186] [DEBUG] cheese - Cache get tops [32m4ms[39m
+[2017-05-15 18:53:41.187] [DEBUG] cheese - Cache get no_reply_topics [32m4ms[39m
+[2017-05-15 18:53:41.187] [DEBUG] cheese - Cache get {"tab":{"$ne":"job"},"deleted":false}pages [32m4ms[39m
+[2017-05-15 18:53:41.190] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m6ms[39m
+[2017-05-15 18:53:41.191] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m0ms[39m
+[2017-05-15 18:53:41.197] [INFO] cheese - Render view index [32m(5ms)[39m
+[2017-05-15 18:53:41.198] [INFO] cheese - Completed 304 [32m(19ms)[39m
+[2017-05-15 18:53:42.547] [INFO] cheese - 
+
+Started 2017-05-15T10:53:42.547Z GET /signup ::ffff:192.168.6.99
+[2017-05-15 18:53:42.560] [INFO] cheese - Render view sign/signup [32m(11ms)[39m
+[2017-05-15 18:53:42.563] [INFO] cheese - Completed 200 [32m(16ms)[39m
+[2017-05-15 18:53:55.090] [INFO] cheese - 
+
+Started 2017-05-15T10:53:55.090Z GET /?tab=all ::ffff:192.168.6.99
+[2017-05-15 18:53:55.135] [DEBUG] cheese - Cache get tops [32m43ms[39m
+[2017-05-15 18:53:55.136] [DEBUG] cheese - Cache get no_reply_topics [32m43ms[39m
+[2017-05-15 18:53:55.137] [DEBUG] cheese - Cache get {"tab":{"$ne":"job"},"deleted":false}pages [32m43ms[39m
+[2017-05-15 18:53:55.139] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m43ms[39m
+[2017-05-15 18:53:55.140] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m0ms[39m
+[2017-05-15 18:53:55.149] [INFO] cheese - Render view index [32m(8ms)[39m
+[2017-05-15 18:53:55.150] [INFO] cheese - Completed 200 [32m(60ms)[39m
+[2017-05-15 18:53:56.348] [INFO] cheese - 
+
+Started 2017-05-15T10:53:56.348Z GET / ::ffff:192.168.6.99
+[2017-05-15 18:53:56.359] [DEBUG] cheese - Cache get tops [32m7ms[39m
+[2017-05-15 18:53:56.360] [DEBUG] cheese - Cache get no_reply_topics [32m7ms[39m
+[2017-05-15 18:53:56.361] [DEBUG] cheese - Cache get {"tab":{"$ne":"job"},"deleted":false}pages [32m8ms[39m
+[2017-05-15 18:53:56.361] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m7ms[39m
+[2017-05-15 18:53:56.365] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m0ms[39m
+[2017-05-15 18:53:56.370] [INFO] cheese - Render view index [32m(5ms)[39m
+[2017-05-15 18:53:56.371] [INFO] cheese - Completed 304 [32m(23ms)[39m
+[2017-05-15 18:54:01.330] [INFO] cheese - 
+
+Started 2017-05-15T10:54:01.330Z GET /api ::ffff:192.168.6.99
+[2017-05-15 18:54:01.356] [INFO] cheese - Render view static/api [32m(24ms)[39m
+[2017-05-15 18:54:01.357] [INFO] cheese - Completed 200 [32m(27ms)[39m
+[2017-05-15 18:54:03.533] [INFO] cheese - 
+
+Started 2017-05-15T10:54:03.532Z GET /getstart ::ffff:192.168.6.99
+[2017-05-15 18:54:03.546] [INFO] cheese - Render view static/getstart [32m(11ms)[39m
+[2017-05-15 18:54:03.546] [INFO] cheese - Completed 304 [32m(14ms)[39m
+[2017-05-15 18:54:07.395] [INFO] cheese - 
+
+Started 2017-05-15T10:54:07.395Z GET /signup ::ffff:192.168.6.99
+[2017-05-15 18:54:07.409] [INFO] cheese - Render view sign/signup [32m(13ms)[39m
+[2017-05-15 18:54:07.409] [INFO] cheese - Completed 304 [32m(14ms)[39m
+[2017-05-15 18:54:09.276] [INFO] cheese - 
+
+Started 2017-05-15T10:54:09.275Z GET /signin ::ffff:192.168.6.99
+[2017-05-15 18:54:09.292] [INFO] cheese - Render view sign/signin [32m(14ms)[39m
+[2017-05-15 18:54:09.334] [INFO] cheese - Completed 200 [32m(59ms)[39m
+[2017-05-15 18:54:10.820] [INFO] cheese - 
+
+Started 2017-05-15T10:54:10.820Z GET /signup ::ffff:192.168.6.99
+[2017-05-15 18:54:10.833] [INFO] cheese - Render view sign/signup [32m(4ms)[39m
+[2017-05-15 18:54:10.835] [INFO] cheese - Completed 304 [32m(15ms)[39m
+[2017-05-15 18:54:12.098] [INFO] cheese - 
+
+Started 2017-05-15T10:54:12.098Z GET /getstart ::ffff:192.168.6.99
+[2017-05-15 18:54:12.119] [INFO] cheese - Render view static/getstart [32m(18ms)[39m
+[2017-05-15 18:54:12.120] [INFO] cheese - Completed 304 [32m(22ms)[39m
+[2017-05-15 18:54:12.819] [INFO] cheese - 
+
+Started 2017-05-15T10:54:12.819Z GET / ::ffff:192.168.6.99
+[2017-05-15 18:54:12.828] [DEBUG] cheese - Cache get tops [32m5ms[39m
+[2017-05-15 18:54:12.829] [DEBUG] cheese - Cache get no_reply_topics [32m5ms[39m
+[2017-05-15 18:54:12.829] [DEBUG] cheese - Cache get {"tab":{"$ne":"job"},"deleted":false}pages [32m5ms[39m
+[2017-05-15 18:54:12.829] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m4ms[39m
+[2017-05-15 18:54:12.832] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m0ms[39m
+[2017-05-15 18:54:12.836] [INFO] cheese - Render view index [32m(4ms)[39m
+[2017-05-15 18:54:12.836] [INFO] cheese - Completed 304 [32m(17ms)[39m
+[2017-05-15 18:56:26.528] [INFO] cheese - 
+
+Started 2017-05-15T10:56:26.528Z GET / ::ffff:192.168.6.99
+[2017-05-15 18:56:26.559] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m3ms[39m
+[2017-05-15 18:56:26.563] [DEBUG] cheese - [35mMONGO[39m users.[34mfind[39m {"conditions":{"is_block":false},"options":{"limit":10,"sort":{"score":-1}},"collectionName":"users"} [32m3ms[39m
+[2017-05-15 18:56:26.563] [DEBUG] cheese - Cache set tops [32m0ms[39m
+[2017-05-15 18:56:26.564] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"},"reply_count":0},"options":{"limit":5,"sort":{"create_at":-1},"fields":{}},"collectionName":"topics"} [32m3ms[39m
+[2017-05-15 18:56:26.564] [DEBUG] cheese - Cache set no_reply_topics [32m0ms[39m
+[2017-05-15 18:56:26.565] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m0ms[39m
+[2017-05-15 18:56:26.571] [INFO] cheese - Render view index [32m(6ms)[39m
+[2017-05-15 18:56:26.571] [INFO] cheese - Completed 304 [32m(43ms)[39m
+[2017-05-15 18:57:00.539] [INFO] cheese - 
+
+Started 2017-05-15T10:57:00.539Z GET / ::ffff:192.168.6.99
+[2017-05-15 18:57:00.546] [DEBUG] cheese - Cache get tops [32m4ms[39m
+[2017-05-15 18:57:00.547] [DEBUG] cheese - Cache get no_reply_topics [32m4ms[39m
+[2017-05-15 18:57:00.547] [DEBUG] cheese - Cache get {"tab":{"$ne":"job"},"deleted":false}pages [32m4ms[39m
+[2017-05-15 18:57:00.548] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m3ms[39m
+[2017-05-15 18:57:00.549] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m1ms[39m
+[2017-05-15 18:57:00.556] [INFO] cheese - Render view index [32m(7ms)[39m
+[2017-05-15 18:57:00.557] [INFO] cheese - Completed 304 [32m(18ms)[39m
+[2017-05-15 19:02:11.939] [INFO] cheese - 
+
+Started 2017-05-15T11:02:11.939Z GET / ::ffff:192.168.6.99
+[2017-05-15 19:02:11.954] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m6ms[39m
+[2017-05-15 19:02:11.958] [DEBUG] cheese - [35mMONGO[39m users.[34mfind[39m {"conditions":{"is_block":false},"options":{"limit":10,"sort":{"score":-1}},"collectionName":"users"} [32m3ms[39m
+[2017-05-15 19:02:11.959] [DEBUG] cheese - Cache set tops [32m1ms[39m
+[2017-05-15 19:02:11.960] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"},"reply_count":0},"options":{"limit":5,"sort":{"create_at":-1},"fields":{}},"collectionName":"topics"} [32m4ms[39m
+[2017-05-15 19:02:11.961] [DEBUG] cheese - Cache set no_reply_topics [32m0ms[39m
+[2017-05-15 19:02:11.962] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m0ms[39m
+[2017-05-15 19:02:11.969] [INFO] cheese - Render view index [32m(7ms)[39m
+[2017-05-15 19:02:11.970] [INFO] cheese - Completed 304 [32m(31ms)[39m
+[2017-05-15 19:02:19.026] [INFO] cheese - 
+
+Started 2017-05-15T11:02:19.025Z GET /?tab=good ::ffff:192.168.6.99
+[2017-05-15 19:02:19.081] [DEBUG] cheese - Cache get tops [32m2ms[39m
+[2017-05-15 19:02:19.081] [DEBUG] cheese - Cache get no_reply_topics [32m2ms[39m
+[2017-05-15 19:02:19.082] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"good":true},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m2ms[39m
+[2017-05-15 19:02:19.083] [DEBUG] cheese - Cache set {"good":true,"deleted":false}pages [32m0ms[39m
+[2017-05-15 19:02:19.091] [INFO] cheese - Render view index [32m(8ms)[39m
+[2017-05-15 19:02:19.093] [INFO] cheese - Completed 200 [32m(68ms)[39m
+[2017-05-15 19:02:20.353] [INFO] cheese - 
+
+Started 2017-05-15T11:02:20.353Z GET /?tab=all ::ffff:192.168.6.99
+[2017-05-15 19:02:20.361] [DEBUG] cheese - Cache get tops [32m4ms[39m
+[2017-05-15 19:02:20.362] [DEBUG] cheese - Cache get no_reply_topics [32m4ms[39m
+[2017-05-15 19:02:20.362] [DEBUG] cheese - Cache get {"tab":{"$ne":"job"},"deleted":false}pages [32m4ms[39m
+[2017-05-15 19:02:20.370] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m11ms[39m
+[2017-05-15 19:02:20.372] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m0ms[39m
+[2017-05-15 19:02:20.384] [INFO] cheese - Render view index [32m(12ms)[39m
+[2017-05-15 19:02:20.385] [INFO] cheese - Completed 304 [32m(32ms)[39m
+[2017-05-15 19:02:21.866] [INFO] cheese - 
+
+Started 2017-05-15T11:02:21.864Z GET /signin ::ffff:192.168.6.99
+[2017-05-15 19:02:21.878] [INFO] cheese - Render view sign/signin [32m(6ms)[39m
+[2017-05-15 19:02:21.879] [INFO] cheese - Completed 304 [32m(15ms)[39m
+[2017-05-15 19:02:24.969] [INFO] cheese - 
+
+Started 2017-05-15T11:02:24.969Z GET /signup ::ffff:192.168.6.99
+[2017-05-15 19:02:24.978] [INFO] cheese - Render view sign/signup [32m(6ms)[39m
+[2017-05-15 19:02:24.979] [INFO] cheese - Completed 304 [32m(10ms)[39m
+[2017-05-15 19:02:49.035] [INFO] cheese - 
+
+Started 2017-05-15T11:02:49.035Z POST /signup ::ffff:192.168.6.99
+[2017-05-15 19:02:49.079] [DEBUG] cheese - [35mMONGO[39m users.[34mfind[39m {"conditions":{"$or":[{"loginname":"yangchunping"},{"email":"18910856145@qq.com"}]},"options":{},"collectionName":"users"} [32m1ms[39m
+[2017-05-15 19:02:49.427] [INFO] cheese - Render view sign/signup [32m(8ms)[39m
+[2017-05-15 19:02:49.429] [INFO] cheese - Completed 200 [32m(394ms)[39m
+[2017-05-15 19:03:22.001] [INFO] cheese - 
+
+Started 2017-05-15T11:03:22.001Z POST /signup ::ffff:192.168.6.99
+[2017-05-15 19:03:22.015] [DEBUG] cheese - [35mMONGO[39m users.[34mfind[39m {"conditions":{"$or":[{"loginname":"yangchunping"},{"email":"18910856145@qq.com"}]},"options":{},"collectionName":"users"} [32m3ms[39m
+[2017-05-15 19:03:22.022] [INFO] cheese - Render view sign/signup [32m(4ms)[39m
+[2017-05-15 19:03:22.023] [INFO] cheese - Completed 422 [32m(22ms)[39m
+[2017-05-15 19:03:26.289] [INFO] cheese - 
+
+Started 2017-05-15T11:03:26.288Z GET /signin ::ffff:192.168.6.99
+[2017-05-15 19:03:26.298] [INFO] cheese - Render view sign/signin [32m(7ms)[39m
+[2017-05-15 19:03:26.298] [INFO] cheese - Completed 304 [32m(10ms)[39m
+[2017-05-15 19:03:38.764] [INFO] cheese - 
+
+Started 2017-05-15T11:03:38.764Z POST /signin ::ffff:192.168.6.99
+[2017-05-15 19:03:38.823] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"email":"18910856145@163.com"},"options":{},"collectionName":"users"} [32m2ms[39m
+[2017-05-15 19:03:38.831] [INFO] cheese - Render view sign/signin [32m(8ms)[39m
+[2017-05-15 19:03:38.832] [INFO] cheese - Completed 403 [32m(68ms)[39m
+[2017-05-15 19:03:41.393] [INFO] cheese - 
+
+Started 2017-05-15T11:03:41.393Z GET /getstart ::ffff:192.168.6.99
+[2017-05-15 19:03:41.426] [INFO] cheese - Render view static/getstart [32m(30ms)[39m
+[2017-05-15 19:03:41.427] [INFO] cheese - Completed 304 [32m(34ms)[39m
+[2017-05-15 19:03:43.888] [INFO] cheese - 
+
+Started 2017-05-15T11:03:43.888Z GET / ::ffff:192.168.6.99
+[2017-05-15 19:03:43.898] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m4ms[39m
+[2017-05-15 19:03:43.903] [DEBUG] cheese - [35mMONGO[39m users.[34mfind[39m {"conditions":{"is_block":false},"options":{"limit":10,"sort":{"score":-1}},"collectionName":"users"} [32m4ms[39m
+[2017-05-15 19:03:43.906] [DEBUG] cheese - Cache set tops [32m1ms[39m
+[2017-05-15 19:03:43.907] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"},"reply_count":0},"options":{"limit":5,"sort":{"create_at":-1},"fields":{}},"collectionName":"topics"} [32m7ms[39m
+[2017-05-15 19:03:43.908] [DEBUG] cheese - Cache set no_reply_topics [32m1ms[39m
+[2017-05-15 19:03:43.908] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m0ms[39m
+[2017-05-15 19:03:43.916] [INFO] cheese - Render view index [32m(7ms)[39m
+[2017-05-15 19:03:43.918] [INFO] cheese - Completed 200 [32m(30ms)[39m
+[2017-05-15 19:04:24.120] [INFO] cheese - 
+
+Started 2017-05-15T11:04:24.120Z GET /auth/github ::ffff:192.168.6.99
+[2017-05-15 19:04:24.173] [INFO] cheese - Completed 200 [32m(53ms)[39m
+[2017-05-15 19:04:28.760] [INFO] cheese - 
+
+Started 2017-05-15T11:04:28.760Z GET /signin ::ffff:192.168.6.99
+[2017-05-15 19:04:28.773] [INFO] cheese - Render view sign/signin [32m(10ms)[39m
+[2017-05-15 19:04:28.774] [INFO] cheese - Completed 304 [32m(14ms)[39m
+[2017-05-15 19:04:29.600] [INFO] cheese - 
+
+Started 2017-05-15T11:04:29.600Z GET /auth/github ::ffff:192.168.6.99
+[2017-05-15 19:04:29.635] [INFO] cheese - Completed 304 [32m(35ms)[39m
+[2017-05-15 19:04:33.969] [INFO] cheese - 
+
+Started 2017-05-15T11:04:33.969Z GET /search_pass ::ffff:192.168.6.99
+[2017-05-15 19:04:33.980] [INFO] cheese - Render view sign/search_pass [32m(8ms)[39m
+[2017-05-15 19:04:33.981] [INFO] cheese - Completed 200 [32m(12ms)[39m
+[2017-05-15 19:04:38.487] [INFO] cheese - 
+
+Started 2017-05-15T11:04:38.487Z GET /getstart ::ffff:192.168.6.99
+[2017-05-15 19:04:38.527] [INFO] cheese - Render view static/getstart [32m(37ms)[39m
+[2017-05-15 19:04:38.528] [INFO] cheese - Completed 304 [32m(41ms)[39m
+[2017-05-15 19:04:42.904] [INFO] cheese - 
+
+Started 2017-05-15T11:04:42.903Z GET /signin ::ffff:192.168.6.99
+[2017-05-15 19:04:42.916] [INFO] cheese - Render view sign/signin [32m(10ms)[39m
+[2017-05-15 19:04:42.966] [INFO] cheese - Completed 304 [32m(63ms)[39m
+[2017-05-15 19:06:59.608] [INFO] cheese - 
+
+Started 2017-05-15T11:06:59.607Z POST /signin ::ffff:192.168.6.99
+[2017-05-15 19:06:59.624] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"email":"18910856145@163.com"},"options":{},"collectionName":"users"} [32m3ms[39m
+[2017-05-15 19:06:59.633] [INFO] cheese - Render view sign/signin [32m(8ms)[39m
+[2017-05-15 19:06:59.634] [INFO] cheese - Completed 403 [32m(27ms)[39m
+[2017-05-15 19:08:10.377] [INFO] cheese - 
+
+Started 2017-05-15T11:08:10.377Z GET /search_pass ::ffff:192.168.6.99
+[2017-05-15 19:08:10.389] [INFO] cheese - Render view sign/search_pass [32m(8ms)[39m
+[2017-05-15 19:08:10.389] [INFO] cheese - Completed 304 [32m(12ms)[39m
+[2017-05-15 19:08:28.551] [INFO] cheese - 
+
+Started 2017-05-15T11:08:28.551Z GET /search_pass ::ffff:192.168.6.99
+[2017-05-15 19:08:28.564] [INFO] cheese - Render view sign/search_pass [32m(9ms)[39m
+[2017-05-15 19:08:28.565] [INFO] cheese - Completed 304 [32m(14ms)[39m
+[2017-05-15 19:08:29.879] [INFO] cheese - 
+
+Started 2017-05-15T11:08:29.879Z GET /signup ::ffff:192.168.6.99
+[2017-05-15 19:08:29.889] [INFO] cheese - Render view sign/signup [32m(7ms)[39m
+[2017-05-15 19:08:29.894] [INFO] cheese - Completed 200 [32m(15ms)[39m
+[2017-05-15 19:08:36.134] [INFO] cheese - 
+
+Started 2017-05-15T11:08:36.134Z GET /signin ::ffff:192.168.6.99
+[2017-05-15 19:08:36.146] [INFO] cheese - Render view sign/signin [32m(10ms)[39m
+[2017-05-15 19:08:36.147] [INFO] cheese - Completed 304 [32m(13ms)[39m
+[2017-05-15 19:08:40.414] [INFO] cheese - 
+
+Started 2017-05-15T11:08:40.414Z GET /signup ::ffff:192.168.6.99
+[2017-05-15 19:08:40.426] [INFO] cheese - Render view sign/signup [32m(9ms)[39m
+[2017-05-15 19:08:40.427] [INFO] cheese - Completed 304 [32m(13ms)[39m
+[2017-05-15 19:08:51.681] [INFO] cheese - 
+
+Started 2017-05-15T11:08:51.681Z POST /signup ::ffff:192.168.6.99
+[2017-05-15 19:08:51.742] [DEBUG] cheese - [35mMONGO[39m users.[34mfind[39m {"conditions":{"$or":[{"loginname":"yangchunping"},{"email":"18910856145@qq.com"}]},"options":{},"collectionName":"users"} [32m2ms[39m
+[2017-05-15 19:08:52.065] [INFO] cheese - Render view sign/signup [32m(6ms)[39m
+[2017-05-15 19:08:52.067] [INFO] cheese - Completed 200 [32m(386ms)[39m
+[2017-05-15 19:09:26.624] [INFO] cheese - 
+
+Started 2017-05-15T11:09:26.624Z GET /signin ::ffff:192.168.6.99
+[2017-05-15 19:09:26.641] [INFO] cheese - Render view sign/signin [32m(12ms)[39m
+[2017-05-15 19:09:26.641] [INFO] cheese - Completed 304 [32m(17ms)[39m
+[2017-05-15 19:09:39.537] [INFO] cheese - 
+
+Started 2017-05-15T11:09:39.537Z POST /signin ::ffff:192.168.6.99
+[2017-05-15 19:09:39.625] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"loginname":{}},"options":{},"collectionName":"users"} [32m2ms[39m
+[2017-05-15 19:09:39.910] [INFO] cheese - Completed 302 [32m(373ms)[39m
+[2017-05-15 19:09:39.914] [INFO] cheese - 
+
+Started 2017-05-15T11:09:39.914Z GET / ::ffff:192.168.6.99
+[2017-05-15 19:09:39.918] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m1ms[39m
+[2017-05-15 19:09:39.934] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m4ms[39m
+[2017-05-15 19:09:39.945] [DEBUG] cheese - [35mMONGO[39m users.[34mfind[39m {"conditions":{"is_block":false},"options":{"limit":10,"sort":{"score":-1}},"collectionName":"users"} [32m7ms[39m
+[2017-05-15 19:09:39.946] [DEBUG] cheese - Cache set tops [32m1ms[39m
+[2017-05-15 19:09:39.947] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"},"reply_count":0},"options":{"limit":5,"sort":{"create_at":-1},"fields":{}},"collectionName":"topics"} [32m8ms[39m
+[2017-05-15 19:09:39.947] [DEBUG] cheese - Cache set no_reply_topics [32m0ms[39m
+[2017-05-15 19:09:39.948] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m0ms[39m
+[2017-05-15 19:09:39.960] [INFO] cheese - Render view index [32m(12ms)[39m
+[2017-05-15 19:09:39.962] [INFO] cheese - Completed 200 [32m(48ms)[39m
+[2017-05-15 19:10:04.750] [INFO] cheese - 
+
+Started 2017-05-15T11:10:04.750Z GET /topic/create ::ffff:192.168.6.99
+[2017-05-15 19:10:04.819] [INFO] cheese - Render view topic/edit [32m(10ms)[39m
+[2017-05-15 19:10:04.820] [INFO] cheese - Completed 200 [32m(70ms)[39m
+[2017-05-15 19:10:15.683] [INFO] cheese - 
+
+Started 2017-05-15T11:10:15.683Z POST /topic/create ::ffff:192.168.6.99
+[2017-05-15 19:10:15.696] [INFO] cheese - Completed 403 [32m(13ms)[39m
+[2017-05-15 19:11:04.458] [INFO] cheese - 
+
+Started 2017-05-15T11:11:04.458Z POST /topic/create ::ffff:192.168.6.99
+[2017-05-15 19:11:04.466] [INFO] cheese - Completed 403 [32m(8ms)[39m
+[2017-05-15 19:14:32.454] [INFO] cheese - 
+
+Started 2017-05-15T11:14:32.454Z GET /topic/create ::ffff:192.168.6.99
+[2017-05-15 19:14:32.475] [INFO] cheese - Render view topic/edit [32m(10ms)[39m
+[2017-05-15 19:14:32.476] [INFO] cheese - Completed 304 [32m(22ms)[39m
+[2017-05-15 19:17:19.673] [INFO] cheese - 
+
+Started 2017-05-15T11:17:19.673Z POST /topic/create ::ffff:192.168.6.99
+[2017-05-15 19:17:19.686] [INFO] cheese - Completed 403 [32m(13ms)[39m
+[2017-05-15 19:18:12.600] [INFO] cheese - 
+
+Started 2017-05-15T11:18:12.600Z POST /signout ::ffff:192.168.6.99
+[2017-05-15 19:18:12.614] [INFO] cheese - Completed 302 [32m(14ms)[39m
+[2017-05-15 19:18:12.619] [INFO] cheese - 
+
+Started 2017-05-15T11:18:12.619Z GET / ::ffff:192.168.6.99
+[2017-05-15 19:18:12.627] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m3ms[39m
+[2017-05-15 19:18:12.632] [DEBUG] cheese - [35mMONGO[39m users.[34mfind[39m {"conditions":{"is_block":false},"options":{"limit":10,"sort":{"score":-1}},"collectionName":"users"} [32m5ms[39m
+[2017-05-15 19:18:12.634] [DEBUG] cheese - Cache set tops [32m1ms[39m
+[2017-05-15 19:18:12.634] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"},"reply_count":0},"options":{"limit":5,"sort":{"create_at":-1},"fields":{}},"collectionName":"topics"} [32m5ms[39m
+[2017-05-15 19:18:12.636] [DEBUG] cheese - Cache set no_reply_topics [32m1ms[39m
+[2017-05-15 19:18:12.636] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m0ms[39m
+[2017-05-15 19:18:12.645] [INFO] cheese - Render view index [32m(9ms)[39m
+[2017-05-15 19:18:12.646] [INFO] cheese - Completed 200 [32m(27ms)[39m
+[2017-05-15 19:18:14.637] [INFO] cheese - 
+
+Started 2017-05-15T11:18:14.637Z GET /signin ::ffff:192.168.6.99
+[2017-05-15 19:18:14.650] [INFO] cheese - Render view sign/signin [32m(6ms)[39m
+[2017-05-15 19:18:14.651] [INFO] cheese - Completed 200 [32m(14ms)[39m
+[2017-05-15 19:18:20.807] [INFO] cheese - 
+
+Started 2017-05-15T11:18:20.807Z POST /signin ::ffff:192.168.6.99
+[2017-05-15 19:18:20.815] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"loginname":{}},"options":{},"collectionName":"users"} [32m2ms[39m
+[2017-05-15 19:18:21.096] [INFO] cheese - Completed 302 [32m(289ms)[39m
+[2017-05-15 19:18:21.102] [INFO] cheese - 
+
+Started 2017-05-15T11:18:21.102Z GET / ::ffff:192.168.6.99
+[2017-05-15 19:18:21.105] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m1ms[39m
+[2017-05-15 19:18:21.109] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m1ms[39m
+[2017-05-15 19:18:21.109] [DEBUG] cheese - Cache get tops [32m2ms[39m
+[2017-05-15 19:18:21.109] [DEBUG] cheese - Cache get no_reply_topics [32m1ms[39m
+[2017-05-15 19:18:21.109] [DEBUG] cheese - Cache get {"tab":{"$ne":"job"},"deleted":false}pages [32m1ms[39m
+[2017-05-15 19:18:21.110] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m0ms[39m
+[2017-05-15 19:18:21.121] [INFO] cheese - Render view index [32m(11ms)[39m
+[2017-05-15 19:18:21.122] [INFO] cheese - Completed 200 [32m(20ms)[39m
+[2017-05-15 19:18:22.925] [INFO] cheese - 
+
+Started 2017-05-15T11:18:22.925Z GET /topic/create ::ffff:192.168.6.99
+[2017-05-15 19:18:22.941] [INFO] cheese - Render view topic/edit [32m(8ms)[39m
+[2017-05-15 19:18:22.941] [INFO] cheese - Completed 304 [32m(16ms)[39m
+[2017-05-15 19:18:27.266] [INFO] cheese - 
+
+Started 2017-05-15T11:18:27.266Z POST /topic/create ::ffff:192.168.6.99
+[2017-05-15 19:18:27.341] [DEBUG] cheese - Cache set 20170515^_^@T_Tperuserperday^_^@T_Tcreate_topic^_^@T_Tyangchunping [32m0ms[39m
+[2017-05-15 19:18:27.348] [INFO] cheese - Render view topic/edit [32m(6ms)[39m
+[2017-05-15 19:18:27.349] [INFO] cheese - Completed 422 [32m(83ms)[39m
+[2017-05-15 19:18:31.729] [INFO] cheese - 
+
+Started 2017-05-15T11:18:31.729Z POST /topic/create ::ffff:192.168.6.99
+[2017-05-15 19:18:31.742] [DEBUG] cheese - Cache get 20170515^_^@T_Tperuserperday^_^@T_Tcreate_topic^_^@T_Tyangchunping [32m0ms[39m
+[2017-05-15 19:18:31.743] [DEBUG] cheese - Cache set 20170515^_^@T_Tperuserperday^_^@T_Tcreate_topic^_^@T_Tyangchunping [32m0ms[39m
+[2017-05-15 19:18:31.763] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m2ms[39m
+[2017-05-15 19:18:31.772] [INFO] cheese - Completed 302 [32m(42ms)[39m
+[2017-05-15 19:18:31.772] [INFO] cheese - 
+
+Started 2017-05-15T11:18:31.772Z GET /topic/59198e87bde8a69618cb7a3a ::ffff:192.168.6.99
+[2017-05-15 19:18:31.779] [DEBUG] cheese - [35mMONGO[39m topics.[34mfindOne[39m {"conditions":{"deleted":false,"_id":"59198e87bde8a69618cb7a3a"},"options":{},"collectionName":"topics"} [32m3ms[39m
+[2017-05-15 19:18:31.786] [DEBUG] cheese - [35mMONGO[39m topiccollects.[34mfindOne[39m {"conditions":{"topic_id":"59198e87bde8a69618cb7a3a","user_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"topiccollects"} [32m9ms[39m
+[2017-05-15 19:18:31.787] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m5ms[39m
+[2017-05-15 19:18:31.788] [DEBUG] cheese - [35mMONGO[39m replies.[34mfind[39m {"conditions":{"deleted":false,"topic_id":"59198e87bde8a69618cb7a3a"},"options":{"sort":{"create_at":1}},"collectionName":"replies"} [32m4ms[39m
+[2017-05-15 19:18:31.794] [DEBUG] cheese - Cache get no_reply_topics [32m3ms[39m
+[2017-05-15 19:18:31.795] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"_id":{"$nin":["59198e87bde8a69618cb7a3a"]},"author_id":"59198c44bde8a69618cb7a39"},"options":{"limit":5,"sort":{"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m3ms[39m
+[2017-05-15 19:18:31.820] [INFO] cheese - Render view topic/index [32m(25ms)[39m
+[2017-05-15 19:18:31.822] [INFO] cheese - Completed 200 [32m(50ms)[39m
+[2017-05-15 19:18:37.820] [INFO] cheese - 
+
+Started 2017-05-15T11:18:37.820Z POST /topic/59198e87bde8a69618cb7a3a/delete ::ffff:192.168.6.99
+[2017-05-15 19:18:37.832] [DEBUG] cheese - [35mMONGO[39m topics.[34mfindOne[39m {"conditions":{"deleted":false,"_id":"59198e87bde8a69618cb7a3a"},"options":{},"collectionName":"topics"} [32m2ms[39m
+[2017-05-15 19:18:37.837] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m2ms[39m
+[2017-05-15 19:18:37.838] [DEBUG] cheese - [35mMONGO[39m replies.[34mfind[39m {"conditions":{"deleted":false,"topic_id":"59198e87bde8a69618cb7a3a"},"options":{"sort":{"create_at":1}},"collectionName":"replies"} [32m3ms[39m
+[2017-05-15 19:18:37.845] [INFO] cheese - Completed 200 [32m(25ms)[39m
+[2017-05-15 19:18:37.900] [INFO] cheese - 
+
+Started 2017-05-15T11:18:37.900Z GET / ::ffff:192.168.6.99
+[2017-05-15 19:18:37.911] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m3ms[39m
+[2017-05-15 19:18:37.912] [DEBUG] cheese - Cache get tops [32m5ms[39m
+[2017-05-15 19:18:37.913] [DEBUG] cheese - Cache get no_reply_topics [32m6ms[39m
+[2017-05-15 19:18:37.914] [DEBUG] cheese - Cache get {"tab":{"$ne":"job"},"deleted":false}pages [32m7ms[39m
+[2017-05-15 19:18:37.916] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m1ms[39m
+[2017-05-15 19:18:37.923] [INFO] cheese - Render view index [32m(7ms)[39m
+[2017-05-15 19:18:37.925] [INFO] cheese - Completed 200 [32m(24ms)[39m
+[2017-05-15 19:18:41.283] [INFO] cheese - 
+
+Started 2017-05-15T11:18:41.283Z GET /topic/create ::ffff:192.168.6.99
+[2017-05-15 19:18:41.300] [INFO] cheese - Render view topic/edit [32m(10ms)[39m
+[2017-05-15 19:18:41.301] [INFO] cheese - Completed 200 [32m(18ms)[39m
+[2017-05-15 19:23:51.331] [INFO] cheese - NodeClub listening on port 3000
+[2017-05-15 19:23:51.335] [INFO] cheese - God bless love....
+[2017-05-15 19:23:51.335] [INFO] cheese - You can debug your app with http://localhost:3000
+[2017-05-15 19:23:51.337] [INFO] cheese - 
+[2017-05-15 19:24:01.736] [INFO] cheese - 
+
+Started 2017-05-15T11:24:01.735Z GET / ::ffff:192.168.6.99
+[2017-05-15 19:24:01.758] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m4ms[39m
+[2017-05-15 19:24:01.780] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m2ms[39m
+[2017-05-15 19:24:01.786] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m0ms[39m
+[2017-05-15 19:24:01.787] [DEBUG] cheese - [35mMONGO[39m users.[34mfind[39m {"conditions":{"is_block":false},"options":{"limit":10,"sort":{"score":-1}},"collectionName":"users"} [32m3ms[39m
+[2017-05-15 19:24:01.790] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"},"reply_count":0},"options":{"limit":5,"sort":{"create_at":-1},"fields":{}},"collectionName":"topics"} [32m6ms[39m
+[2017-05-15 19:24:01.792] [DEBUG] cheese - Cache set tops [32m2ms[39m
+[2017-05-15 19:24:01.792] [DEBUG] cheese - Cache set no_reply_topics [32m0ms[39m
+[2017-05-15 19:24:01.824] [INFO] cheese - Render view index [32m(30ms)[39m
+[2017-05-15 19:24:01.829] [INFO] cheese - Completed 200 [32m(94ms)[39m
+[2017-05-15 19:24:05.828] [INFO] cheese - 
+
+Started 2017-05-15T11:24:05.828Z GET / ::ffff:192.168.6.99
+[2017-05-15 19:24:05.854] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m2ms[39m
+[2017-05-15 19:24:05.854] [DEBUG] cheese - Cache get tops [32m5ms[39m
+[2017-05-15 19:24:05.854] [DEBUG] cheese - Cache get no_reply_topics [32m2ms[39m
+[2017-05-15 19:24:05.855] [DEBUG] cheese - Cache get {"tab":{"$ne":"job"},"deleted":false}pages [32m3ms[39m
+[2017-05-15 19:24:05.860] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m1ms[39m
+[2017-05-15 19:24:05.884] [INFO] cheese - Render view index [32m(24ms)[39m
+[2017-05-15 19:24:05.886] [INFO] cheese - Completed 304 [32m(58ms)[39m
+[2017-05-15 19:24:07.323] [INFO] cheese - 
+
+Started 2017-05-15T11:24:07.323Z GET / ::ffff:192.168.6.99
+[2017-05-15 19:24:07.338] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m1ms[39m
+[2017-05-15 19:24:07.339] [DEBUG] cheese - Cache get tops [32m2ms[39m
+[2017-05-15 19:24:07.339] [DEBUG] cheese - Cache get no_reply_topics [32m3ms[39m
+[2017-05-15 19:24:07.339] [DEBUG] cheese - Cache get {"tab":{"$ne":"job"},"deleted":false}pages [32m3ms[39m
+[2017-05-15 19:24:07.340] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m0ms[39m
+[2017-05-15 19:24:07.347] [INFO] cheese - Render view index [32m(6ms)[39m
+[2017-05-15 19:24:07.350] [INFO] cheese - Completed 304 [32m(27ms)[39m
+[2017-05-15 19:24:09.211] [INFO] cheese - 
+
+Started 2017-05-15T11:24:09.211Z GET / ::ffff:192.168.6.99
+[2017-05-15 19:24:09.222] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m2ms[39m
+[2017-05-15 19:24:09.223] [DEBUG] cheese - Cache get tops [32m4ms[39m
+[2017-05-15 19:24:09.223] [DEBUG] cheese - Cache get no_reply_topics [32m4ms[39m
+[2017-05-15 19:24:09.224] [DEBUG] cheese - Cache get {"tab":{"$ne":"job"},"deleted":false}pages [32m5ms[39m
+[2017-05-15 19:24:09.225] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m0ms[39m
+[2017-05-15 19:24:09.230] [INFO] cheese - Render view index [32m(5ms)[39m
+[2017-05-15 19:24:09.231] [INFO] cheese - Completed 304 [32m(20ms)[39m
+[2017-05-15 19:24:10.363] [INFO] cheese - 
+
+Started 2017-05-15T11:24:10.362Z GET /my/messages ::ffff:192.168.6.99
+[2017-05-15 19:24:10.376] [DEBUG] cheese - [35mMONGO[39m messages.[34mfind[39m {"conditions":{"has_read":true,"master_id":"59198c44bde8a69618cb7a39"},"options":{"sort":{"create_at":-1},"limit":20},"collectionName":"messages"} [32m2ms[39m
+[2017-05-15 19:24:10.376] [DEBUG] cheese - [35mMONGO[39m messages.[34mfind[39m {"conditions":{"has_read":false,"master_id":"59198c44bde8a69618cb7a39"},"options":{"sort":{"create_at":-1}},"collectionName":"messages"} [32m1ms[39m
+[2017-05-15 19:24:10.384] [INFO] cheese - Render view message/index [32m(7ms)[39m
+[2017-05-15 19:24:10.385] [INFO] cheese - Completed 200 [32m(23ms)[39m
+[2017-05-15 19:24:13.018] [INFO] cheese - 
+
+Started 2017-05-15T11:24:13.018Z GET /topic/create ::ffff:192.168.6.99
+[2017-05-15 19:24:13.037] [INFO] cheese - Render view topic/edit [32m(12ms)[39m
+[2017-05-15 19:24:13.038] [INFO] cheese - Completed 200 [32m(20ms)[39m
+[2017-05-15 19:24:48.734] [INFO] cheese - 
+
+Started 2017-05-15T11:24:48.733Z POST /topic/create ::ffff:192.168.6.99
+[2017-05-15 19:24:48.766] [DEBUG] cheese - Cache get 20170515^_^@T_Tperuserperday^_^@T_Tcreate_topic^_^@T_Tyangchunping [32m0ms[39m
+[2017-05-15 19:24:48.768] [DEBUG] cheese - Cache set 20170515^_^@T_Tperuserperday^_^@T_Tcreate_topic^_^@T_Tyangchunping [32m1ms[39m
+[2017-05-15 19:24:48.795] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m3ms[39m
+[2017-05-15 19:24:48.808] [INFO] cheese - Completed 302 [32m(75ms)[39m
+[2017-05-15 19:24:48.810] [INFO] cheese - 
+
+Started 2017-05-15T11:24:48.810Z GET /topic/591990002fb543171b5233ce ::ffff:192.168.6.99
+[2017-05-15 19:24:48.820] [DEBUG] cheese - [35mMONGO[39m topics.[34mfindOne[39m {"conditions":{"deleted":false,"_id":"591990002fb543171b5233ce"},"options":{},"collectionName":"topics"} [32m4ms[39m
+[2017-05-15 19:24:48.822] [DEBUG] cheese - [35mMONGO[39m topiccollects.[34mfindOne[39m {"conditions":{"topic_id":"591990002fb543171b5233ce","user_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"topiccollects"} [32m6ms[39m
+[2017-05-15 19:24:48.826] [DEBUG] cheese - [35mMONGO[39m replies.[34mfind[39m {"conditions":{"deleted":false,"topic_id":"591990002fb543171b5233ce"},"options":{"sort":{"create_at":1}},"collectionName":"replies"} [32m2ms[39m
+[2017-05-15 19:24:48.826] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m3ms[39m
+[2017-05-15 19:24:48.835] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"_id":{"$nin":["591990002fb543171b5233ce"]},"author_id":"59198c44bde8a69618cb7a39"},"options":{"limit":5,"sort":{"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m2ms[39m
+[2017-05-15 19:24:48.837] [DEBUG] cheese - Cache get no_reply_topics [32m6ms[39m
+[2017-05-15 19:24:48.871] [INFO] cheese - Render view topic/index [32m(34ms)[39m
+[2017-05-15 19:24:48.874] [INFO] cheese - Completed 200 [32m(64ms)[39m
+[2017-05-15 19:25:15.858] [INFO] cheese - 
+
+Started 2017-05-15T11:25:15.858Z GET / ::ffff:192.168.6.99
+[2017-05-15 19:25:15.926] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m2ms[39m
+[2017-05-15 19:25:15.931] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m1ms[39m
+[2017-05-15 19:25:15.931] [DEBUG] cheese - [35mMONGO[39m users.[34mfind[39m {"conditions":{"is_block":false},"options":{"limit":10,"sort":{"score":-1}},"collectionName":"users"} [32m4ms[39m
+[2017-05-15 19:25:15.934] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"},"reply_count":0},"options":{"limit":5,"sort":{"create_at":-1},"fields":{}},"collectionName":"topics"} [32m5ms[39m
+[2017-05-15 19:25:15.935] [DEBUG] cheese - Cache set tops [32m0ms[39m
+[2017-05-15 19:25:15.938] [DEBUG] cheese - Cache set no_reply_topics [32m0ms[39m
+[2017-05-15 19:25:15.948] [INFO] cheese - Render view index [32m(10ms)[39m
+[2017-05-15 19:25:15.949] [INFO] cheese - Completed 200 [32m(91ms)[39m
+[2017-05-15 19:25:17.867] [INFO] cheese - 
+
+Started 2017-05-15T11:25:17.866Z GET / ::ffff:192.168.6.99
+[2017-05-15 19:25:17.875] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m1ms[39m
+[2017-05-15 19:25:17.875] [DEBUG] cheese - Cache get tops [32m2ms[39m
+[2017-05-15 19:25:17.875] [DEBUG] cheese - Cache get no_reply_topics [32m2ms[39m
+[2017-05-15 19:25:17.876] [DEBUG] cheese - Cache get {"tab":{"$ne":"job"},"deleted":false}pages [32m3ms[39m
+[2017-05-15 19:25:17.877] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m0ms[39m
+[2017-05-15 19:25:17.904] [INFO] cheese - Render view index [32m(27ms)[39m
+[2017-05-15 19:25:17.906] [INFO] cheese - Completed 304 [32m(40ms)[39m
+[2017-05-15 19:25:18.845] [INFO] cheese - 
+
+Started 2017-05-15T11:25:18.845Z GET /?tab=job ::ffff:192.168.6.99
+[2017-05-15 19:25:18.863] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":"job"},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m2ms[39m
+[2017-05-15 19:25:18.865] [DEBUG] cheese - Cache get tops [32m5ms[39m
+[2017-05-15 19:25:18.866] [DEBUG] cheese - Cache get no_reply_topics [32m6ms[39m
+[2017-05-15 19:25:18.869] [DEBUG] cheese - Cache set {"tab":"job","deleted":false}pages [32m0ms[39m
+[2017-05-15 19:25:18.870] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m3ms[39m
+[2017-05-15 19:25:18.883] [INFO] cheese - Render view index [32m(12ms)[39m
+[2017-05-15 19:25:18.884] [INFO] cheese - Completed 200 [32m(39ms)[39m
+[2017-05-15 19:25:20.402] [INFO] cheese - 
+
+Started 2017-05-15T11:25:20.402Z GET /?tab=all ::ffff:192.168.6.99
+[2017-05-15 19:25:20.411] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m1ms[39m
+[2017-05-15 19:25:20.412] [DEBUG] cheese - Cache get tops [32m3ms[39m
+[2017-05-15 19:25:20.412] [DEBUG] cheese - Cache get no_reply_topics [32m3ms[39m
+[2017-05-15 19:25:20.413] [DEBUG] cheese - Cache get {"tab":{"$ne":"job"},"deleted":false}pages [32m4ms[39m
+[2017-05-15 19:25:20.414] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m1ms[39m
+[2017-05-15 19:25:20.422] [INFO] cheese - Render view index [32m(8ms)[39m
+[2017-05-15 19:25:20.423] [INFO] cheese - Completed 200 [32m(21ms)[39m
+[2017-05-15 19:25:22.186] [INFO] cheese - 
+
+Started 2017-05-15T11:25:22.186Z GET /?tab=job ::ffff:192.168.6.99
+[2017-05-15 19:25:22.194] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":"job"},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m1ms[39m
+[2017-05-15 19:25:22.195] [DEBUG] cheese - Cache get tops [32m2ms[39m
+[2017-05-15 19:25:22.195] [DEBUG] cheese - Cache get no_reply_topics [32m2ms[39m
+[2017-05-15 19:25:22.195] [DEBUG] cheese - Cache get {"tab":"job","deleted":false}pages [32m2ms[39m
+[2017-05-15 19:25:22.197] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m1ms[39m
+[2017-05-15 19:25:22.207] [INFO] cheese - Render view index [32m(9ms)[39m
+[2017-05-15 19:25:22.208] [INFO] cheese - Completed 304 [32m(22ms)[39m
+[2017-05-15 19:25:23.843] [INFO] cheese - 
+
+Started 2017-05-15T11:25:23.843Z GET /?tab=good ::ffff:192.168.6.99
+[2017-05-15 19:25:23.855] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"good":true},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m1ms[39m
+[2017-05-15 19:25:23.855] [DEBUG] cheese - Cache get tops [32m3ms[39m
+[2017-05-15 19:25:23.856] [DEBUG] cheese - Cache get no_reply_topics [32m3ms[39m
+[2017-05-15 19:25:23.857] [DEBUG] cheese - Cache set {"good":true,"deleted":false}pages [32m0ms[39m
+[2017-05-15 19:25:23.868] [INFO] cheese - Render view index [32m(11ms)[39m
+[2017-05-15 19:25:23.869] [INFO] cheese - Completed 200 [32m(26ms)[39m
+[2017-05-15 19:25:24.883] [INFO] cheese - 
+
+Started 2017-05-15T11:25:24.883Z GET /?tab=share ::ffff:192.168.6.99
+[2017-05-15 19:25:24.893] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":"share"},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m1ms[39m
+[2017-05-15 19:25:24.894] [DEBUG] cheese - Cache get tops [32m3ms[39m
+[2017-05-15 19:25:24.894] [DEBUG] cheese - Cache get no_reply_topics [32m3ms[39m
+[2017-05-15 19:25:24.896] [DEBUG] cheese - Cache set {"tab":"share","deleted":false}pages [32m1ms[39m
+[2017-05-15 19:25:24.905] [INFO] cheese - Render view index [32m(9ms)[39m
+[2017-05-15 19:25:24.906] [INFO] cheese - Completed 200 [32m(23ms)[39m
+[2017-05-15 19:25:25.442] [INFO] cheese - 
+
+Started 2017-05-15T11:25:25.442Z GET /?tab=ask ::ffff:192.168.6.99
+[2017-05-15 19:25:25.455] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":"ask"},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m2ms[39m
+[2017-05-15 19:25:25.455] [DEBUG] cheese - Cache get tops [32m2ms[39m
+[2017-05-15 19:25:25.456] [DEBUG] cheese - Cache get no_reply_topics [32m3ms[39m
+[2017-05-15 19:25:25.457] [DEBUG] cheese - Cache set {"tab":"ask","deleted":false}pages [32m0ms[39m
+[2017-05-15 19:25:25.464] [INFO] cheese - Render view index [32m(7ms)[39m
+[2017-05-15 19:25:25.465] [INFO] cheese - Completed 200 [32m(23ms)[39m
+[2017-05-15 19:25:26.362] [INFO] cheese - 
+
+Started 2017-05-15T11:25:26.362Z GET /?tab=job ::ffff:192.168.6.99
+[2017-05-15 19:25:26.371] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":"job"},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m1ms[39m
+[2017-05-15 19:25:26.373] [DEBUG] cheese - Cache get tops [32m4ms[39m
+[2017-05-15 19:25:26.373] [DEBUG] cheese - Cache get no_reply_topics [32m4ms[39m
+[2017-05-15 19:25:26.373] [DEBUG] cheese - Cache get {"tab":"job","deleted":false}pages [32m4ms[39m
+[2017-05-15 19:25:26.375] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m1ms[39m
+[2017-05-15 19:25:26.385] [INFO] cheese - Render view index [32m(8ms)[39m
+[2017-05-15 19:25:26.386] [INFO] cheese - Completed 304 [32m(24ms)[39m
+[2017-05-15 19:25:27.482] [INFO] cheese - 
+
+Started 2017-05-15T11:25:27.482Z GET /topic/591990002fb543171b5233ce ::ffff:192.168.6.99
+[2017-05-15 19:25:27.493] [DEBUG] cheese - [35mMONGO[39m topics.[34mfindOne[39m {"conditions":{"deleted":false,"_id":"591990002fb543171b5233ce"},"options":{},"collectionName":"topics"} [32m3ms[39m
+[2017-05-15 19:25:27.500] [DEBUG] cheese - [35mMONGO[39m topiccollects.[34mfindOne[39m {"conditions":{"topic_id":"591990002fb543171b5233ce","user_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"topiccollects"} [32m8ms[39m
+[2017-05-15 19:25:27.503] [DEBUG] cheese - [35mMONGO[39m replies.[34mfind[39m {"conditions":{"deleted":false,"topic_id":"591990002fb543171b5233ce"},"options":{"sort":{"create_at":1}},"collectionName":"replies"} [32m1ms[39m
+[2017-05-15 19:25:27.503] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m2ms[39m
+[2017-05-15 19:25:27.511] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"_id":{"$nin":["591990002fb543171b5233ce"]},"author_id":"59198c44bde8a69618cb7a39"},"options":{"limit":5,"sort":{"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m2ms[39m
+[2017-05-15 19:25:27.511] [DEBUG] cheese - Cache get no_reply_topics [32m4ms[39m
+[2017-05-15 19:25:27.526] [INFO] cheese - Render view topic/index [32m(14ms)[39m
+[2017-05-15 19:25:27.528] [INFO] cheese - Completed 200 [32m(45ms)[39m
+[2017-05-15 19:25:32.938] [INFO] cheese - 
+
+Started 2017-05-15T11:25:32.938Z GET /topic/591990002fb543171b5233ce/edit ::ffff:192.168.6.99
+[2017-05-15 19:25:32.971] [DEBUG] cheese - [35mMONGO[39m topics.[34mfindOne[39m {"conditions":{"_id":"591990002fb543171b5233ce"},"options":{},"collectionName":"topics"} [32m1ms[39m
+[2017-05-15 19:25:32.973] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m1ms[39m
+[2017-05-15 19:25:32.988] [INFO] cheese - Render view topic/edit [32m(13ms)[39m
+[2017-05-15 19:25:32.989] [INFO] cheese - Completed 200 [32m(51ms)[39m
+[2017-05-15 19:25:50.424] [INFO] cheese - 
+
+Started 2017-05-15T11:25:50.424Z POST /topic/591990002fb543171b5233ce/edit ::ffff:192.168.6.99
+[2017-05-15 19:25:50.491] [DEBUG] cheese - [35mMONGO[39m topics.[34mfindOne[39m {"conditions":{"_id":"591990002fb543171b5233ce"},"options":{},"collectionName":"topics"} [32m1ms[39m
+[2017-05-15 19:25:50.493] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m1ms[39m
+[2017-05-15 19:25:50.502] [INFO] cheese - Completed 302 [32m(78ms)[39m
+[2017-05-15 19:25:50.502] [DEBUG] cheese - [35mMONGO[39m users.[34mfind[39m {"conditions":{"loginname":{"$in":["localhost","T_Tperuserperday","T_Tcreate_topic","T_Tyangchunping"]}},"options":{},"collectionName":"users"} [32m2ms[39m
+[2017-05-15 19:25:50.504] [INFO] cheese - 
+
+Started 2017-05-15T11:25:50.504Z GET /topic/591990002fb543171b5233ce ::ffff:192.168.6.99
+[2017-05-15 19:25:50.510] [DEBUG] cheese - [35mMONGO[39m topics.[34mfindOne[39m {"conditions":{"deleted":false,"_id":"591990002fb543171b5233ce"},"options":{},"collectionName":"topics"} [32m2ms[39m
+[2017-05-15 19:25:50.514] [DEBUG] cheese - [35mMONGO[39m topiccollects.[34mfindOne[39m {"conditions":{"topic_id":"591990002fb543171b5233ce","user_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"topiccollects"} [32m5ms[39m
+[2017-05-15 19:25:50.518] [DEBUG] cheese - [35mMONGO[39m replies.[34mfind[39m {"conditions":{"deleted":false,"topic_id":"591990002fb543171b5233ce"},"options":{"sort":{"create_at":1}},"collectionName":"replies"} [32m1ms[39m
+[2017-05-15 19:25:50.518] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m2ms[39m
+[2017-05-15 19:25:50.523] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"_id":{"$nin":["591990002fb543171b5233ce"]},"author_id":"59198c44bde8a69618cb7a39"},"options":{"limit":5,"sort":{"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m2ms[39m
+[2017-05-15 19:25:50.523] [DEBUG] cheese - Cache get no_reply_topics [32m3ms[39m
+[2017-05-15 19:25:50.638] [INFO] cheese - Render view topic/index [32m(114ms)[39m
+[2017-05-15 19:25:50.639] [INFO] cheese - Completed 200 [32m(135ms)[39m
+[2017-05-15 19:25:54.818] [INFO] cheese - 
+
+Started 2017-05-15T11:25:54.818Z GET / ::ffff:192.168.6.99
+[2017-05-15 19:25:54.833] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m1ms[39m
+[2017-05-15 19:25:54.834] [DEBUG] cheese - Cache get tops [32m4ms[39m
+[2017-05-15 19:25:54.834] [DEBUG] cheese - Cache get no_reply_topics [32m3ms[39m
+[2017-05-15 19:25:54.834] [DEBUG] cheese - Cache get {"tab":{"$ne":"job"},"deleted":false}pages [32m3ms[39m
+[2017-05-15 19:25:54.835] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m0ms[39m
+[2017-05-15 19:25:54.844] [INFO] cheese - Render view index [32m(8ms)[39m
+[2017-05-15 19:25:54.844] [INFO] cheese - Completed 304 [32m(26ms)[39m
+[2017-05-15 19:25:55.770] [INFO] cheese - 
+
+Started 2017-05-15T11:25:55.770Z GET /?tab=job ::ffff:192.168.6.99
+[2017-05-15 19:25:55.848] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":"job"},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m2ms[39m
+[2017-05-15 19:25:55.850] [DEBUG] cheese - Cache get tops [32m5ms[39m
+[2017-05-15 19:25:55.850] [DEBUG] cheese - Cache get no_reply_topics [32m5ms[39m
+[2017-05-15 19:25:55.850] [DEBUG] cheese - Cache get {"tab":"job","deleted":false}pages [32m4ms[39m
+[2017-05-15 19:25:55.854] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m3ms[39m
+[2017-05-15 19:25:55.872] [INFO] cheese - Render view index [32m(12ms)[39m
+[2017-05-15 19:25:55.873] [INFO] cheese - Completed 200 [32m(103ms)[39m
+[2017-05-15 19:25:56.995] [INFO] cheese - 
+
+Started 2017-05-15T11:25:56.995Z GET /topic/591990002fb543171b5233ce ::ffff:192.168.6.99
+[2017-05-15 19:25:57.009] [DEBUG] cheese - [35mMONGO[39m topics.[34mfindOne[39m {"conditions":{"deleted":false,"_id":"591990002fb543171b5233ce"},"options":{},"collectionName":"topics"} [32m1ms[39m
+[2017-05-15 19:25:57.009] [DEBUG] cheese - [35mMONGO[39m topiccollects.[34mfindOne[39m {"conditions":{"topic_id":"591990002fb543171b5233ce","user_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"topiccollects"} [32m1ms[39m
+[2017-05-15 19:25:57.013] [DEBUG] cheese - [35mMONGO[39m replies.[34mfind[39m {"conditions":{"deleted":false,"topic_id":"591990002fb543171b5233ce"},"options":{"sort":{"create_at":1}},"collectionName":"replies"} [32m1ms[39m
+[2017-05-15 19:25:57.013] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m2ms[39m
+[2017-05-15 19:25:57.018] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"_id":{"$nin":["591990002fb543171b5233ce"]},"author_id":"59198c44bde8a69618cb7a39"},"options":{"limit":5,"sort":{"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m2ms[39m
+[2017-05-15 19:25:57.018] [DEBUG] cheese - Cache get no_reply_topics [32m3ms[39m
+[2017-05-15 19:25:57.060] [INFO] cheese - Render view topic/index [32m(42ms)[39m
+[2017-05-15 19:25:57.062] [INFO] cheese - Completed 200 [32m(67ms)[39m
+[2017-05-15 19:26:00.546] [INFO] cheese - 
+
+Started 2017-05-15T11:26:00.546Z GET /?tab=job ::ffff:192.168.6.99
+[2017-05-15 19:26:00.556] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":"job"},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m1ms[39m
+[2017-05-15 19:26:00.557] [DEBUG] cheese - Cache get tops [32m3ms[39m
+[2017-05-15 19:26:00.557] [DEBUG] cheese - Cache get no_reply_topics [32m3ms[39m
+[2017-05-15 19:26:00.557] [DEBUG] cheese - Cache get {"tab":"job","deleted":false}pages [32m3ms[39m
+[2017-05-15 19:26:00.558] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m0ms[39m
+[2017-05-15 19:26:00.574] [INFO] cheese - Render view index [32m(14ms)[39m
+[2017-05-15 19:26:00.575] [INFO] cheese - Completed 200 [32m(29ms)[39m
+[2017-05-15 19:26:01.874] [INFO] cheese - 
+
+Started 2017-05-15T11:26:01.874Z GET /topic/591990002fb543171b5233ce ::ffff:192.168.6.99
+[2017-05-15 19:26:01.885] [DEBUG] cheese - [35mMONGO[39m topics.[34mfindOne[39m {"conditions":{"deleted":false,"_id":"591990002fb543171b5233ce"},"options":{},"collectionName":"topics"} [32m3ms[39m
+[2017-05-15 19:26:01.886] [DEBUG] cheese - [35mMONGO[39m topiccollects.[34mfindOne[39m {"conditions":{"topic_id":"591990002fb543171b5233ce","user_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"topiccollects"} [32m2ms[39m
+[2017-05-15 19:26:01.890] [DEBUG] cheese - [35mMONGO[39m replies.[34mfind[39m {"conditions":{"deleted":false,"topic_id":"591990002fb543171b5233ce"},"options":{"sort":{"create_at":1}},"collectionName":"replies"} [32m2ms[39m
+[2017-05-15 19:26:01.890] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m2ms[39m
+[2017-05-15 19:26:01.898] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"_id":{"$nin":["591990002fb543171b5233ce"]},"author_id":"59198c44bde8a69618cb7a39"},"options":{"limit":5,"sort":{"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m2ms[39m
+[2017-05-15 19:26:01.901] [DEBUG] cheese - Cache get no_reply_topics [32m7ms[39m
+[2017-05-15 19:26:01.936] [INFO] cheese - Render view topic/index [32m(35ms)[39m
+[2017-05-15 19:26:01.937] [INFO] cheese - Completed 200 [32m(63ms)[39m
+[2017-05-15 19:26:17.300] [INFO] cheese - 
+
+Started 2017-05-15T11:26:17.300Z POST /591990002fb543171b5233ce/reply ::ffff:192.168.6.99
+[2017-05-15 19:26:17.362] [DEBUG] cheese - Cache set 20170515^_^@T_Tperuserperday^_^@T_Tcreate_reply^_^@T_Tyangchunping [32m1ms[39m
+[2017-05-15 19:26:17.374] [DEBUG] cheese - [35mMONGO[39m topics.[34mfindOne[39m {"conditions":{"_id":"591990002fb543171b5233ce"},"options":{},"collectionName":"topics"} [32m11ms[39m
+[2017-05-15 19:26:17.377] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m1ms[39m
+[2017-05-15 19:26:17.393] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m4ms[39m
+[2017-05-15 19:26:17.398] [DEBUG] cheese - [35mMONGO[39m topics.[34mfindOne[39m {"conditions":{"_id":"591990002fb543171b5233ce"},"options":{},"collectionName":"topics"} [32m6ms[39m
+[2017-05-15 19:26:17.405] [INFO] cheese - Completed 302 [32m(105ms)[39m
+[2017-05-15 19:26:17.411] [INFO] cheese - 
+
+Started 2017-05-15T11:26:17.411Z GET /topic/591990002fb543171b5233ce ::ffff:192.168.6.99
+[2017-05-15 19:26:17.416] [DEBUG] cheese - [35mMONGO[39m topics.[34mfindOne[39m {"conditions":{"deleted":false,"_id":"591990002fb543171b5233ce"},"options":{},"collectionName":"topics"} [32m1ms[39m
+[2017-05-15 19:26:17.418] [DEBUG] cheese - [35mMONGO[39m topiccollects.[34mfindOne[39m {"conditions":{"topic_id":"591990002fb543171b5233ce","user_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"topiccollects"} [32m3ms[39m
+[2017-05-15 19:26:17.422] [DEBUG] cheese - [35mMONGO[39m replies.[34mfind[39m {"conditions":{"deleted":false,"topic_id":"591990002fb543171b5233ce"},"options":{"sort":{"create_at":1}},"collectionName":"replies"} [32m1ms[39m
+[2017-05-15 19:26:17.424] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m4ms[39m
+[2017-05-15 19:26:17.426] [DEBUG] cheese - [35mMONGO[39m users.[34mfindOne[39m {"conditions":{"_id":"59198c44bde8a69618cb7a39"},"options":{},"collectionName":"users"} [32m1ms[39m
+[2017-05-15 19:26:17.450] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"_id":{"$nin":["591990002fb543171b5233ce"]},"author_id":"59198c44bde8a69618cb7a39"},"options":{"limit":5,"sort":{"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m2ms[39m
+[2017-05-15 19:26:17.451] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"},"reply_count":0},"options":{"limit":5,"sort":{"create_at":-1},"fields":{}},"collectionName":"topics"} [32m1ms[39m
+[2017-05-15 19:26:17.452] [DEBUG] cheese - Cache set no_reply_topics [32m0ms[39m
+[2017-05-15 19:26:17.490] [INFO] cheese - Render view topic/index [32m(38ms)[39m
+[2017-05-15 19:26:17.491] [INFO] cheese - Completed 200 [32m(80ms)[39m
+[2017-05-15 19:26:32.169] [INFO] cheese - 
+
+Started 2017-05-15T11:26:32.169Z GET / ::ffff:192.168.6.99
+[2017-05-15 19:26:32.180] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m2ms[39m
+[2017-05-15 19:26:32.182] [DEBUG] cheese - Cache get no_reply_topics [32m5ms[39m
+[2017-05-15 19:26:32.182] [DEBUG] cheese - Cache get {"tab":{"$ne":"job"},"deleted":false}pages [32m4ms[39m
+[2017-05-15 19:26:32.185] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m1ms[39m
+[2017-05-15 19:26:32.185] [DEBUG] cheese - [35mMONGO[39m users.[34mfind[39m {"conditions":{"is_block":false},"options":{"limit":10,"sort":{"score":-1}},"collectionName":"users"} [32m2ms[39m
+[2017-05-15 19:26:32.187] [DEBUG] cheese - Cache set tops [32m1ms[39m
+[2017-05-15 19:26:32.196] [INFO] cheese - Render view index [32m(9ms)[39m
+[2017-05-15 19:26:32.198] [INFO] cheese - Completed 200 [32m(29ms)[39m
+[2017-05-15 19:30:16.116] [INFO] cheese - 
+
+Started 2017-05-15T11:30:16.115Z GET / ::ffff:192.168.6.99
+[2017-05-15 19:30:16.129] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} [32m2ms[39m
+[2017-05-15 19:30:16.133] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages [32m0ms[39m
+[2017-05-15 19:30:16.134] [DEBUG] cheese - [35mMONGO[39m users.[34mfind[39m {"conditions":{"is_block":false},"options":{"limit":10,"sort":{"score":-1}},"collectionName":"users"} [32m3ms[39m
+[2017-05-15 19:30:16.135] [DEBUG] cheese - [35mMONGO[39m topics.[34mfind[39m {"conditions":{"deleted":false,"tab":{"$ne":"job"},"reply_count":0},"options":{"limit":5,"sort":{"create_at":-1},"fields":{}},"collectionName":"topics"} [32m4ms[39m
+[2017-05-15 19:30:16.136] [DEBUG] cheese - Cache set tops [32m1ms[39m
+[2017-05-15 19:30:16.137] [DEBUG] cheese - Cache set no_reply_topics [32m0ms[39m
+[2017-05-15 19:30:16.148] [INFO] cheese - Render view index [32m(11ms)[39m
+[2017-05-15 19:30:16.149] [INFO] cheese - Completed 304 [32m(34ms)[39m
+[2017-05-15 19:32:49.762] [INFO] cheese - NodeClub listening on port 3000
+[2017-05-15 19:32:49.767] [INFO] cheese - God bless love....
+[2017-05-15 19:32:49.768] [INFO] cheese - You can debug your app with http://localhost:3000
+[2017-05-15 19:32:49.770] [INFO] cheese - 
+[2017-05-15 19:32:53.885] [INFO] cheese - 
+
+Started 2017-05-15T11:32:53.884Z GET / ::ffff:192.168.6.99
+[2017-05-15 19:32:53.920] [DEBUG] cheese - MONGO topics.find {"conditions":{"deleted":false,"tab":{"$ne":"job"}},"options":{"skip":0,"limit":20,"sort":{"top":-1,"last_reply_at":-1},"fields":{}},"collectionName":"topics"} 4ms
+[2017-05-15 19:32:53.926] [DEBUG] cheese - Cache set {"tab":{"$ne":"job"},"deleted":false}pages 0ms
+[2017-05-15 19:32:53.928] [DEBUG] cheese - MONGO users.find {"conditions":{"is_block":false},"options":{"limit":10,"sort":{"score":-1}},"collectionName":"users"} 4ms
+[2017-05-15 19:32:53.930] [DEBUG] cheese - MONGO topics.find {"conditions":{"deleted":false,"tab":{"$ne":"job"},"reply_count":0},"options":{"limit":5,"sort":{"create_at":-1},"fields":{}},"collectionName":"topics"} 6ms
+[2017-05-15 19:32:53.932] [DEBUG] cheese - Cache set tops 2ms
+[2017-05-15 19:32:53.932] [DEBUG] cheese - Cache set no_reply_topics 0ms
+[2017-05-15 19:32:53.961] [INFO] cheese - Render view index (28ms)
+[2017-05-15 19:32:53.966] [INFO] cheese - Completed 200 (82ms)
+[2017-05-15 19:33:17.491] [INFO] cheese - NodeClub listening on port 3000
+[2017-05-15 19:33:17.495] [INFO] cheese - God bless love....
+[2017-05-15 19:33:17.496] [INFO] cheese - You can debug your app with http://localhost:3000
+[2017-05-15 19:33:17.498] [INFO] cheese - 

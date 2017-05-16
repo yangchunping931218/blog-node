@@ -1,6 +1,7 @@
 /*!
  * nodeclub - app.js
  */
+
 /**
  * Module dependencies.
  */
